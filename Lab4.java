@@ -15,10 +15,7 @@ public class Lab4 {
 			userInput = scan1.nextInt();
 			scan1.nextLine();
 			factorial = 1;
-			for (int i = userInput; i > 0; i--) {
-				factorial = factorial * i;
-
-			}
+			factorial = factorialGetter(userInput, factorial);
 
 			System.out.println("The factorial of " + userInput + " is " + factorial);
 
@@ -27,6 +24,14 @@ public class Lab4 {
 		}
 		System.out.println("See you later! It's been real!");
 		scan1.close();
+	}
+
+	private static long factorialGetter(int userInput, long factorial) {
+		for (int i = userInput; i > 0; i--) {
+			factorial = factorial * i;
+
+		}
+		return factorial;
 	}
 
 }
